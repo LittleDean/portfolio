@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/reponsive.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Personal Portfolia</title>
+  </head>
+  <body class="">
+    <!--======================= HEADER =======================-->
+    <header id="header">
+      <div class="header-main">
+        <h3 class="header__logo">QuangDang</h3>
+        <ul class="nav-bar">
+          <li class="nav-bar__item">
+            <a href="#home" class="nav-bar__item-link nav__home">Home</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#about" class="nav-bar__item-link nav__about ">About</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#skills" class="nav-bar__item-link nav__skills">Skills</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#services" class="nav-bar__item-link nav__services">Services</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#portfolio" class="nav-bar__item-link nav__portfolio">Portfolio</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#contact" class="nav-bar__item-link nav__contact">Contact Me</a>
+          </li>
+          <input type="checkbox" id="theme-checkbox" />
+          <label for="theme-checkbox" class="toggle-theme">
+            <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+            <span class="theme-icon"><i class="fa-solid fa-sun"></i></span>
+            <div class="ball"></div>
+          </label>
+        </ul>
+      </div>
+    </header>
+    <!--======================= CONTAINER =======================-->
+    <div class="container grid">
+      <!--======================= SIDEBAR =======================-->
+      <section id="home">
+        <div class="home-follow">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-codepen"></i>
+        </div>
+        <div class="home__main wide">
+          <div class="row">
+            <div class="main__desc col l-6">
+              <h1 class="desc-heading">Hello, <br />I am Quang</h1>
+              <p class="desc-title">I am a Front-end Developer</p>
+              <span class="desc-content">
+                High level experience in web design and development knowledge,
+                producing quality work.
+              </span>
+              <a class="btn">
+                Contact Me
+                <i class="fa-solid fa-paper-plane"></i>
+              </a>
+              <a href="#about" class="scroll-down">
+                <i class="fa-solid fa-computer-mouse"></i>
+                <span>Scroll Down</span>
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+            </div>
+            <div class="main__avatar col l-6">
+              <div class="main__img"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--======================= ABOUT SECTION =======================-->
+      <section id="about" class="section__main wide">
+        <h2 class="section__title">About Me</h2>
+        <h5 class="section__subtitle">My introduction</h5>
+        <div class="section__content row">
+          <div class="col l-6">
+            <div alt="About Me" class="section__img"></div>
+          </div>
+          <div class="col l-6">
+            <p class="section__desc">
+              Web developer, with extensive knowledge and years experience,
+              working in web technologies and Ui / Ux design, delivering
+              quality work
+            </p>
+            <div class="section__exp row">
+              <p class="col l-4">
+                <span class="section__exp-number">08+</span>
+                <span class="section__exp-type">Years experience</span>
+              </p>
+              <p class="col l-4">
+                <span class="section__exp-number">20+</span>
+                <span class="section__exp-type">Completed project</span>
+              </p>
+              <p class="col l-4">
+                <span class="section__exp-number">05+</span>
+                <span class="section__exp-type">Companies Worked</span>
+              </p>
+            </div>
+            <a href="#" download class="btn">
+              Download CV
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--======================= SKILLS SECTION =======================-->
+      <section id="skills" class="section__main wide">
+        <h2 class="section__title">Skills</h2>
+        <h5 class="section__subtitle">My technical level</h5>
+        <div class="skills__container"></div>
+      </section>
+      <!--======================= QUALIFICATION SECTION =======================-->
+      <section id="qualification" class="section__main wide">
+        <h2 class="section__title">Qualification</h2>
+        <h5 class="section__subtitle">My personal journey</h5>
+        <div class="qualification__section">
+          <div class="qualification__tabs">
+            <button
+              class="qualification__tabs-edu active"
+              data-target="#education"
+            >
+              <i class="qualification__tab-icon fa-solid fa-graduation-cap"></i>
+              Education
+            </button>
+            <button class="qualification__tabs-work" data-target="#work">
+              <i class="qualification__tab-icon fa-solid fa-briefcase"></i>
+              Work
+            </button>
+          </div>
+          <!--======================= QUALIFICATION CONTENT 1 =======================-->
+          <div
+            class="qualification__content active"
+            data-content
+            id="education"
+          >
+            <!--======================= QUALIFICATION ITEM 1 =======================-->
+            <div class="qualification__item">
+              <h3 class="qualification__item-name">Computer Engineer</h3>
+              <p class="qualification__item-desc">Peru - University</p>
+              <span class="qualification__item-time">
+                <i class="fa-solid fa-calendar-days"></i>
+                2009 - 2014
+              </span>
+            </div>
+
+            <div class="qualification__line">
+              <div class="qualification__line-rounder"></div>
+              <div class="qualification__line-ruler"></div>
+            </div>
+            <div></div>
+
+            <!--======================= QUALIFICATION ITEM 2 =======================-->
+            <div></div>
+            <div class="qualification__line">
+              <div class="qualification__line-rounder"></div>
+              <div class="qualification__line-ruler"></div>
+            </div>
+            <div class="qualification__item">
+              <h3 class="qualification__item-name">Web Design</h3>
+              <p class="qualification__item-desc">Spain - Insitute</p>
+              <span class="qualification__item-time">
+                <i class="fa-solid fa-calendar-days"></i>
+                2014 - 2017
+              </span>
+            </div>
+            <!--======================= QUALIFICATION ITEM 3 =======================-->
+            <div class="qualification__item">
+              <h3 class="qualification__item-name">Web Development</h3>
+              <p class="qualification__item-desc">Peru - Insitute</p>
+              <span class="qualification__item-time">
+                <i class="fa-solid fa-calendar-days"></i>
+                2017 - 2020
+              </span>
+            </div>
+
+            <div class="qualification__line">
+              <div class="qualification__line-rounder"></div>
+              <div class="qualification__line-ruler"></div>
+            </div>
+            <div></div>
+            <!--======================= QUALIFICATION ITEM 4 =======================-->
+            <div></div>
+            <div class="qualification__line">
+              <div class="qualification__line-rounder"></div>
+              <!-- <div class="qualification__line-ruler"></div> -->
+            </div>
+            <div class="qualification__item">
+              <h3 class="qualification__item-name">Master in Ui/Ux</h3>
+              <p class="qualification__item-desc">Peru - Insitute</p>
+              <span class="qualification__item-time">
+                <i class="fa-solid fa-calendar-days"></i>
+                2020 - 2022
+              </span>
+            </div>
+          </div>
+          <!--======================= QUALIFICATION CONTENT 2 =======================-->
+          <div class="qualification__content" data-content="" id="work">
+            <!--======================= QUALIFICATION ITEM 1 =======================-->
+            <div class="qualification__item">
+              <h3 class="qualification__item-name">Software Engineer</h3>
+              <p class="qualification__item-desc">Microsoft - Peru</p>
+              <span class="qualification__item-time">
+                <i class="fa-solid fa-calendar-days"></i>
+                2016 - 2018
+              </span>
+            </div>
+
+            <div class="qualification__line">
+              <div class="qualification__line-rounder"></div>
+              <div class="qualification__line-ruler"></div>
+            </div>
+            <div></div>
+
+            <!--======================= QUALIFICATION ITEM 2 =======================-->
+            <div></div>
+            <div class="qualification__line">
+              <div class="qualification__line-rounder"></div>
+              <div class="qualification__line-ruler"></div>
+            </div>
+            <div class="qualification__item">
+              <h3 class="qualification__item-name">Front-end Developer</h3>
+              <p class="qualification__item-desc">Apple Inc - Spain</p>
+              <span class="qualification__item-time">
+                <i class="fa-solid fa-calendar-days"></i>
+                2018 - 2020
+              </span>
+            </div>
+            <!--======================= QUALIFICATION ITEM 3 =======================-->
+            <div class="qualification__item">
+              <h3 class="qualification__item-name">UI Designer</h3>
+              <p class="qualification__item-desc">Figma - Spain</p>
+              <span class="qualification__item-time">
+                <i class="fa-solid fa-calendar-days"></i>
+                2020 - 2022
+              </span>
+            </div>
+
+            <div class="qualification__line">
+              <div class="qualification__line-rounder"></div>
+              <!-- <div class="qualification__line-ruler"></div> -->
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+      <!--======================= SERVICES SECTION =======================-->
+      <section id="services" class="section__main wide">
+        <h2 class="section__title">Services</h2>
+        <h5 class="section__subtitle">What i offer</h5>
+        <div class="services__section">
+      <!--======================= SERVICES OPTION 1 =======================-->
+          <div class="services__option">
+            <div class="services__option-body">
+              <i class="services__option-icon fa-solid fa-layer-group"></i>
+              <h3 class="services__option-title">Ui/Ux<br />Designer</h3>
+              <button class="services__option-btn btn textBtn">
+                View more
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="services__modal">
+              <div class="services__modal-main">
+                <h3 class="modal__main-title">
+                  Ui/Ux<br />
+                  Designer
+                </h3>
+                <span><i class="modal__main-close fa-solid fa-xmark"></i></span>
+                <ul class="modal__content-list">
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    I develop the user interface.
+                  </li>
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    Web page development.
+                  </li>
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    I cerate us element interactions.
+                  </li>
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    I position on your company brand.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      <!--======================= SERVICES OPTION 2 =======================-->
+          <div class="services__option">
+            <div class="services__option-body">
+              <i class="services__option-icon fa-solid fa-code"></i>
+              <h3 class="services__option-title">Front-end<br />Developer</h3>
+              <button class="services__option-btn btn textBtn">
+                View more
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="services__modal">
+              <div class="services__modal-main">
+                <h3 class="modal__main-title">Front-end<br />Developer</h3>
+                <span><i class="modal__main-close fa-solid fa-xmark"></i></span>
+                <ul class="modal__content-list">
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    I develop the user interface.
+                  </li>
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    Web page development.
+                  </li>
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    I cerate us element interactions.
+                  </li>
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    I position on your company brand.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      <!--======================= SERVICES OPTION 3 =======================-->
+          <div class="services__option">
+            <div class="services__option-body">
+              <i class="services__option-icon fa-regular fa-pen-to-square"></i>
+              <h3 class="services__option-title">Branding<br />Designer</h3>
+              <button class="services__option-btn btn textBtn">
+                View more
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="services__modal">
+              <div class="services__modal-main">
+                <h3 class="modal__main-title">
+                  Branding <br />
+                  Designer
+                </h3>
+                <span><i class="modal__main-close fa-solid fa-xmark"></i></span>
+                <ul class="modal__content-list">
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    I develop the user interface.
+                  </li>
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    Web page development.
+                  </li>
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    I cerate us element interactions.
+                  </li>
+                  <li class="modal__content-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    I position on your company brand.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--======================= PORTFOLIO SECTION =======================-->
+      <section id="portfolio" class="section__main wide">
+        <h2 class="section__title">Portfolio</h2>
+        <h5 class="section__subtitle">Most recent work</h5>
+        <div class='test'>
+          <div class="portfolio__section swiper">
+            <div class="swiper-wrapper">
+              <!--======================= PORTFOLIO CONTENT 1 =======================-->
+              <div class="portfolio__main swiper-slide">
+                <img
+                  class="portfolio__main-img"
+                  src="/assets/img/student4.jpg"
+                  alt=""
+                />
+                <div class="portfolio__main-content">
+                  <h3 class="portfolio__content-title">Mordern Website</h3>
+                  <p class="portfolio__content-desc">
+                    Website adaptable to all devices , with ui components and
+                    animated interactions
+                  </p>
+                  <a href="#" class="btn portfolio__content-link">
+                    Demo
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <!--======================= PORTFOLIO CONTENT 2 =======================-->
+              <div class="portfolio__main swiper-slide">
+                <img
+                  class="portfolio__main-img"
+                  src="/assets/img/student4.jpg"
+                  alt=""
+                />
+                <div class="portfolio__main-content">
+                  <h3 class="portfolio__content-title">Brand Design</h3>
+                  <p class="portfolio__content-desc">
+                    Website adaptable to all devices, with ui components and
+                    animated interactions
+                  </p>
+                  <a href="#" class="btn portfolio__content-link">
+                    Demo
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <!--======================= PORTFOLIO CONTENT 3 =======================-->
+              <div class="portfolio__main swiper-slide">
+                <img
+                  class="portfolio__main-img"
+                  src="/assets/img/student4.jpg"
+                  alt=""
+                />
+                <div class="portfolio__main-content">
+                  <h3 class="portfolio__content-title">Online Store</h3>
+                  <p class="portfolio__content-desc">
+                    Website adaptable to all devices, with ui components and
+                    animated interactions
+                  </p>
+                  <a href="#" class="btn portfolio__content-link">
+                    Demo
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-icon swiper-button-next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="swiper-button-icon swiper-button-prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+        </div>
+      </section>
+      <!--======================= PROJECT SECTION =======================-->
+      <section id="project" class="wide">
+        <div class="project__section">
+          <div class="project__section-content">
+            <h2 class="project__section-title">You have a new project</h2>
+            <p class="project__section-desc">
+              Contact me now and get a 30% discount on your new project.
+            </p>
+            <a href="#project" class="btn whiteBtn">
+              Contact Me
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+          <div class="project__section-img">
+            <img
+              src="/assets/img/student4-removebg-preview.png"
+              alt="Contact"
+            />
+          </div>
+        </div>
+      </section>
+      <!--======================= TESTIMONIAL SECTION =======================-->
+      <section id="testimonial" class="wide">
+        <h2 class="section__title">Testimonial</h2>
+        <h5 class="section__subtitle">My client saying</h5>
+        <div class="testimonial__section swiper">
+          <div class="swiper-wrapper">
+            <!--======================= TESTIMONIAL CONTENT 1 =======================-->
+            <div class="testimonial__content swiper-slide">
+              <div class="testmonial__user">
+                <img
+                  class="testmonial__user-img"
+                  src="assets/img/testimonial/user1.jpeg"
+                  alt="avatar"
+                />
+                <div class="testmonial__user-info">
+                  <h3 class="testmonial__user-name">Sienna Wells </h3>
+                  <span class="testmonial__user-type">Client</span>
+                </div>
+                <div class="testmonial__user-ratings">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+              <div class="testimonial__content-comment">
+                I get a good impression, i carry out my project with all the
+                possible quality and attention and support 24 hours a day.
+              </div>
+            </div>
+            <!--======================= TESTIMONIAL CONTENT 2 =======================-->
+            <div class="testimonial__content swiper-slide">
+              <div class="testmonial__user">
+                <img
+                  class="testmonial__user-img"
+                  src="assets/img/testimonial/user2.jpeg"
+                  alt="avatar"
+                />
+                <div class="testmonial__user-info">
+                  <h3 class="testmonial__user-name">Steve Cook</h3>
+                  <span class="testmonial__user-type">Client</span>
+                </div>
+                <div class="testmonial__user-ratings">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="testimonial__content-comment">
+                I get a good impression, i carry out my project with all the
+                possible quality and attention and support 24 hours a day.
+              </div>
+            </div>
+            <!--======================= TESTIMONIAL CONTENT 3 =======================-->
+            <div class="testimonial__content swiper-slide">
+              <div class="testmonial__user">
+                <img
+                  class="testmonial__user-img"
+                  src="assets/img/testimonial/user3.jpeg"
+                  alt="avatar"
+                />
+                <div class="testmonial__user-info">
+                  <h3 class="testmonial__user-name">Julia Chandler</h3>
+                  <span class="testmonial__user-type">Client</span>
+                </div>
+                <div class="testmonial__user-ratings">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="testimonial__content-comment">
+                I get a good impression, i carry out my project with all the
+                possible quality and attention and support 24 hours a day.
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-testimonial"></div>
+        </div>
+      </section>
+      <!--======================= CONTACT SECTION =======================-->
+      <section id="contact" class="section__main wide">
+        <h2 class="section__title">Contact Me</h2>
+        <h5 class="section__subtitle">Get in touch</h5>
+        <div class="contact__section">
+          <div class="contact__info">
+            <div class="contact__info-email">
+              <div class="contact__info-img">
+                <i class="uil uil-envelope-alt"></i>
+              </div>
+              <div class="contact__info-text">
+                <h3 class="contact__info-title">My Email</h3>
+                quangdang@gmail.com
+              </div>
+            </div>
+            <div class="contact__info-number">
+              <div class="contact__info-img">
+                <i class="uil uil-phone"></i>
+              </div>
+              <div class="contact__info-text">
+              <h3 class="contact__info-title">My Phone</h3>
+                +84-111-222-333
+              </div>
+            </div>
+            <div class="contact__info-location">
+              <div class="contact__info-img">
+                <i class="uil uil-map-marker"></i>
+              </div>
+              <div class="contact__info-text">
+              <h3 class="contact__info-title">My Address</h3>
+                43 Đ. Nguyễn Chí Thanh, Giảng Võ, Ba Đình, Hà Nội
+              </div>
+            </div>
+            <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.4022553688133!2d105.81086996261719!3d21.02579912086308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab6ed89cb507%3A0x9ab6115ef5c29e59!2zNDMgxJAuIE5ndXnhu4VuIENow60gVGhhbmgsIE5n4buNYyBLaMOhbmgsIEJhIMSQw6xuaCwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1667574883107!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="contact__form">
+            <div class="contact__form-item contact__form-name">
+              <label for="form__input-name" class="contact__form-item-title">Name</label>
+              <input class="contact__form-input" id="form__input-name" required type="text" />
+            </div>
+            <div class="contact__form-item contact__form-number">
+              <label for="form__input-number" class="contact__form-item-title">Number</label>
+              <input class="contact__form-input" id="form__input-number" required type="text" />
+            </div>
+            <div class="contact__form-item contact__form-email">
+              <label for="form__input-email" class="contact__form-item-title">Email</label>
+              <input class="contact__form-input" id="form__input-email" required type="text" />
+            </div>
+            <div class="contact__form-item contact__form-project">
+              <label for="form__input-project" class="contact__form-item-title">Project</label>
+              <textarea
+                class="contact__form-textarea"
+                rows="2"
+                cols="0"
+                spellcheck="false"
+                id="form__input-project"
+              ></textarea>
+            </textarea>
+            </div>
+            <div class="contact__form-item contact__form-message">
+              <label for="form__input-message" class="contact__form-item-title">Message</label>
+              <textarea
+                class="contact__form-textarea"
+                rows="6"
+                cols="0"
+                spellcheck="false"
+                id="form__input-message"
+              ></textarea>
+            </div>
+            <button type="submit" class="submit btn">
+              Send Message<i class="uil uil-message"></i>
+            </button>
+          </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--======================= FOOTER =======================-->
+    <footer id="footer">
+      <div class="footer__content wide">
+        <div class="footer__logo">LOGO</div>
+        <div class="footer__main">
+          <div class="footer__social">
+            <a href="#footer" class="footer__social-link">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#footer" class="footer__social-link">
+              <i class="uil uil-instagram"></i>
+            </a>
+            <a href="#footer" class="footer__social-link">
+              <i class="uil uil-twitter-alt"></i>
+            </a>
+          </div>
+          <p>Copy right 2022. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="to-top-btn"><i class="uil uil-angle-double-up"></i></a>
+  </body>
+  <script src="/assets/js/swiper-bundle.min.js"></script>
+  <script src="/assets/js/script.js"></script>
+</html>

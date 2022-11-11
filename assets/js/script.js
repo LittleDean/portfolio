@@ -5,16 +5,20 @@ const USER_STORAGE_KEY = "PERSONAL-OPTIONS"
 // Selector
 const body = document.body
 const header = $('#header')
+const headerNavBar = $('.nav-bar')
 const headerNavList = $$('.nav-bar__item-link')
 const toggleThemeBtn = $('.toggle-theme')
 const themeCheckbox = document.getElementById('theme-checkbox')
+const showHeaderNavBtn = $('.header__nav-show')
+const hideHeaderNavBtn = $('.nav-bar__close')
 const toTopBtn = $('.to-top-btn')
 const sections = $$('section')
-const skillsSection = $('.skills__container')
+const skillsSection = $('.skills__section')
 const qualificationTabBtns = $$('[data-target]')
 const qualificationTabContents = $$('[data-content]')
 const servicesBtns = $$('.services__option-btn')
 const servicesModal = $$('.services__modal')
+const servicesModalMain = $$('.services__modal-main')
 const modalCloseBtns = $$('.modal__main-close')
 
 
@@ -22,8 +26,8 @@ const modalCloseBtns = $$('.modal__main-close')
 var swiperPortfolio = new Swiper(".portfolio__section", {
     cssMode: true,
     slidesPerView: 1,
-    // autoplay: { delay: 4000 },
     loop: true,
+    // autoplay: { delay: 4000 },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -38,14 +42,37 @@ var swiperPortfolio = new Swiper(".portfolio__section", {
 var swiper = new Swiper(".testimonial__section", {
     loop: true,
     grabCursor: true,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 48,
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
         clickable: true,
     },
+    breakpoints: {
+        586: {
+            slidesPerView: 2,
+        }
+    },
 });
+
+// Scroll Reveal
+const sr = ScrollReveal({
+    distance: '45px',
+    duration: 2700,
+    reset: true,
+})
+
+function handleScrollReveal() {
+    sr.reveal('.main__desc', { delay: 300, origin: 'left' })
+    // sr.reveal('.main__avatar', { delay: 300, origin: 'right' })
+    sr.reveal('.about__section-img', { delay: 300, origin: 'left' })
+    // sr.reveal('.about__section-detail', { delay: 300, origin: 'right' })
+    sr.reveal('.contact__info', { delay: 300, origin: 'left' })
+    // sr.reveal('.contact__form', { delay: 300, origin: 'right' })
+    sr.reveal('.skills__section,.qualification__section,.services__section,.portfolio__main,.project__section,.testimonial__section', { delay: 100, origin: 'bottom' })
+}
+handleScrollReveal();
 
 // Lắng nghe / xử lí các sự kiện (DOM Events)
 const app = {
@@ -80,15 +107,15 @@ const app = {
             skills: [
                 {
                     skillName: 'Figma',
-                    skillProgress: '90%'
+                    skillProgress: '80%'
                 },
                 {
                     skillName: 'Sketch',
-                    skillProgress: '85%'
+                    skillProgress: '75%'
                 },
                 {
                     skillName: 'Photoshop',
-                    skillProgress: '85%'
+                    skillProgress: '75%'
                 },
             ]
         },
@@ -99,7 +126,7 @@ const app = {
             skills: [
                 {
                     skillName: 'PHP',
-                    skillProgress: '80%'
+                    skillProgress: '75%'
                 },
                 {
                     skillName: 'Node JS',
@@ -107,11 +134,11 @@ const app = {
                 },
                 {
                     skillName: 'Firebase',
-                    skillProgress: '90%'
+                    skillProgress: '50%'
                 },
                 {
                     skillName: 'Python',
-                    skillProgress: '55%'
+                    skillProgress: '60%'
                 },
             ],
         },
@@ -121,20 +148,16 @@ const app = {
             unitExp: 'More than 2 years',
             skills: [
                 {
-                    skillName: 'PHP',
-                    skillProgress: '80%'
+                    skillName: 'Semrush',
+                    skillProgress: '60%'
                 },
                 {
-                    skillName: 'Node JS',
-                    skillProgress: '70%'
+                    skillName: 'Conductor',
+                    skillProgress: '50%'
                 },
                 {
-                    skillName: 'Firebase',
-                    skillProgress: '90%'
-                },
-                {
-                    skillName: 'Python',
-                    skillProgress: '55%'
+                    skillName: 'Yoast',
+                    skillProgress: '60%'
                 },
             ],
         },
@@ -155,15 +178,23 @@ const app = {
             _this.setConfig('isDarkTheme', _this.isDarkTheme)
         })
 
+        // Show/Hide Header Navigation
+        showHeaderNavBtn.onclick = (() => {
+            headerNavBar.classList.toggle('active')
+        })
+        hideHeaderNavBtn.onclick = (() => {
+            headerNavBar.classList.remove('active')
+        })
+
+
+
         // Highlight header - Show to top button - Active nav-link when scroll
         window.onscroll = (() => {
             // Highlight header
             if (_this.isDarkTheme) {
-                header.style.backgroundColor = window.scrollY > 0 ? 'var(--container-color)' : 'transparent';
                 header.style.boxShadow = 'none'
             } else {
                 header.style.boxShadow = window.scrollY > 0 ? '0px 1px 1px rgb(0 0 0 / 12%)' : 'none'
-                header.style.backgroundColor = window.scrollY > 0 ? 'var(--container-color)' : 'transparent';
             }
 
             // Show to top button
@@ -177,10 +208,13 @@ const app = {
                 }
             })
             headerNavList.forEach(navItem => {
+                // Highlight a navItem
                 navItem.classList.remove('active')
                 if (navItem.classList.contains(`nav__${currentSection}`)) {
                     navItem.classList.add('active')
                 }
+                // Hide Header Navigation when click in small screen
+                headerNavBar.classList.remove('active')
             })
 
         })
@@ -203,29 +237,46 @@ const app = {
         // Services Modal
         servicesBtns.forEach((btn, index) => {
             btn.onclick = () => {
+                body.classList.add("modal-open")
                 servicesModal[index].classList.add('active')
             }
         })
         modalCloseBtns.forEach((btn, index) => {
             btn.onclick = () => {
+                body.classList.remove("modal-open")
                 servicesModal[index].classList.remove('active')
             }
         })
         servicesModal.forEach(item => {
             item.onclick = ((e) => {
+                body.classList.remove("modal-open")
                 e.target.classList.remove('active')
             })
         })
+        servicesModalMain.forEach(item => {
+            item.onclick = ((event) => {
+                event.stopPropagation();
+            })
+        })
     },
-
     // Handle dropdown Skill-unit
     handleDropDown: function () {
         const unitBody = $$('.unit__body')
+        const skillUnits = $$('.skill__unit')
+
         function toggleSkill() {
-            this.parentElement.classList.toggle('active')
+            const parentUnit = this.closest('.skill__unit')
+            if (parentUnit.classList.contains('active')) {
+                parentUnit.classList.remove('active')
+            } else {
+                skillUnits.forEach(item => {
+                    item.classList.remove('active')
+                })
+                parentUnit.classList.add('active')
+            }
         }
-        unitBody.forEach(el => {
-            el.onclick = toggleSkill
+        unitBody.forEach(unit => {
+            unit.onclick = toggleSkill
         });
     },
 
@@ -242,7 +293,7 @@ const app = {
                                 <span class="skill__progress-number">${skill.skillProgress}</span>
                             </div>
                             <div class="skill__progress-full">
-                                <span class="skill__progress-bar"></span>
+                                <span class="skill__progress-bar" style="width:${skill.skillProgress}"></span>
                             </div>
                         </div >`}
                 )
@@ -280,6 +331,7 @@ const app = {
         this.handleEvents();
 
         this.render();
+
 
         this.handleDropDown();
         themeCheckbox.checked = this.isDarkTheme

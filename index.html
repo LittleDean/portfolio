@@ -13,47 +13,65 @@
     />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="./assets/css/global.css" />
-    <link rel="stylesheet" href="./assets/css/reponsive.css" />
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/reponsive.css" />
     <title>Personal Portfolia</title>
   </head>
   <body class="">
     <!--======================= HEADER =======================-->
     <header id="header">
       <div class="header-main">
-        <h3 class="header__logo">QuangDang</h3>
-        <ul class="nav-bar">
-          <li class="nav-bar__item">
-            <a href="#home" class="nav-bar__item-link nav__home">Home</a>
-          </li>
-          <li class="nav-bar__item">
-            <a href="#about" class="nav-bar__item-link nav__about ">About</a>
-          </li>
-          <li class="nav-bar__item">
-            <a href="#skills" class="nav-bar__item-link nav__skills">Skills</a>
-          </li>
-          <li class="nav-bar__item">
-            <a href="#services" class="nav-bar__item-link nav__services">Services</a>
-          </li>
-          <li class="nav-bar__item">
-            <a href="#portfolio" class="nav-bar__item-link nav__portfolio">Portfolio</a>
-          </li>
-          <li class="nav-bar__item">
-            <a href="#contact" class="nav-bar__item-link nav__contact">Contact Me</a>
-          </li>
+        <a href="#" class="header__logo">QuangDang</a>
+        <div class="header__nav">
+          <ul class="nav-bar">
+            <li class="nav-bar__item">
+              <a href="#home" class="nav-bar__item-link nav__home">
+                <i class="uil uil-estate"></i>
+                Home</a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="#about" class="nav-bar__item-link nav__about">
+                <i class="uil uil-user"></i>
+                About
+              </a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="#skills" class="nav-bar__item-link nav__skills">
+                <i class="uil uil-file-alt"></i>
+                Skills</a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="#services" class="nav-bar__item-link nav__services">
+                <i class="uil uil-briefcase-alt"></i>
+                Services</a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="#portfolio" class="nav-bar__item-link nav__portfolio">
+                <i class="uil uil-image"></i>
+                Portfolio</a>
+            </li>
+            <li class="nav-bar__item">
+              <a href="#contact" class="nav-bar__item-link nav__contact">
+                <i class="uil uil-message"></i>
+                Contact Me</a>
+            </li>
+            <div class="nav-bar__close">
+              <i class="uil uil-times"></i>
+            </div>
+          </ul>
           <input type="checkbox" id="theme-checkbox" />
           <label for="theme-checkbox" class="toggle-theme">
-            <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
-            <span class="theme-icon"><i class="fa-solid fa-sun"></i></span>
-            <div class="ball"></div>
+              <i class="uil uil-moon"></i>
+              <i class="uil uil-sun"></i>
           </label>
-        </ul>
+          <div class="header__nav-show"><i class="uil uil-apps"></i></div>
+        </div>
       </div>
     </header>
     <!--======================= CONTAINER =======================-->
-    <div class="container grid">
-      <!--======================= SIDEBAR =======================-->
+    <div class="container">
+      <!--======================= HOME =======================-->
       <section id="home">
         <div class="home-follow">
           <i class="fa-brands fa-facebook"></i>
@@ -61,9 +79,8 @@
           <i class="fa-brands fa-codepen"></i>
         </div>
         <div class="home__main wide">
-          <div class="row">
-            <div class="main__desc col l-6">
-              <h1 class="desc-heading">Hello, <br />I am Quang</h1>
+            <div class="main__desc">
+              <h1 class="desc-heading">Hi, I am Quang</h1>
               <p class="desc-title">I am a Front-end Developer</p>
               <span class="desc-content">
                 High level experience in web design and development knowledge,
@@ -79,38 +96,35 @@
                 <i class="fa-solid fa-arrow-down"></i>
               </a>
             </div>
-            <div class="main__avatar col l-6">
+            <div class="main__avatar">
               <div class="main__img"></div>
             </div>
-          </div>
         </div>
       </section>
       <!--======================= ABOUT SECTION =======================-->
       <section id="about" class="section__main wide">
         <h2 class="section__title">About Me</h2>
         <h5 class="section__subtitle">My introduction</h5>
-        <div class="section__content row">
-          <div class="col l-6">
-            <div alt="About Me" class="section__img"></div>
-          </div>
-          <div class="col l-6">
-            <p class="section__desc">
+        <div class="about__section">
+          <div alt="About Me" class="about__section-img"></div>
+          <div class="about__section-detail">
+            <p class="about__section-desc">
               Web developer, with extensive knowledge and years experience,
               working in web technologies and Ui / Ux design, delivering
               quality work
             </p>
-            <div class="section__exp row">
-              <p class="col l-4">
-                <span class="section__exp-number">08+</span>
-                <span class="section__exp-type">Years experience</span>
+            <div class="about__section-exp">
+              <p>
+                <span class="about__section-exp-number">08+</span><br>
+                <span class="about__section-exp-type">Years experience</span>
               </p>
-              <p class="col l-4">
-                <span class="section__exp-number">20+</span>
-                <span class="section__exp-type">Completed project</span>
+              <p>
+                <span class="about__section-exp-number">20+</span><br>
+                <span class="about__section-exp-type">Completed project</span>
               </p>
-              <p class="col l-4">
-                <span class="section__exp-number">05+</span>
-                <span class="section__exp-type">Companies Worked</span>
+              <p>
+                <span class="about__section-exp-number">05+</span><br>
+                <span class="about__section-exp-type">Companies Worked</span>
               </p>
             </div>
             <a href="#" download class="btn">
@@ -124,7 +138,7 @@
       <section id="skills" class="section__main wide">
         <h2 class="section__title">Skills</h2>
         <h5 class="section__subtitle">My technical level</h5>
-        <div class="skills__container"></div>
+        <div class="skills__section"></div>
       </section>
       <!--======================= QUALIFICATION SECTION =======================-->
       <section id="qualification" class="section__main wide">
@@ -153,7 +167,7 @@
             <!--======================= QUALIFICATION ITEM 1 =======================-->
             <div class="qualification__item">
               <h3 class="qualification__item-name">Computer Engineer</h3>
-              <p class="qualification__item-desc">Peru - University</p>
+              <p class="qualification__item-desc">Cambridge - University</p>
               <span class="qualification__item-time">
                 <i class="fa-solid fa-calendar-days"></i>
                 2009 - 2014
@@ -174,7 +188,7 @@
             </div>
             <div class="qualification__item">
               <h3 class="qualification__item-name">Web Design</h3>
-              <p class="qualification__item-desc">Spain - Insitute</p>
+              <p class="qualification__item-desc">Oxford - Insitute</p>
               <span class="qualification__item-time">
                 <i class="fa-solid fa-calendar-days"></i>
                 2014 - 2017
@@ -183,7 +197,7 @@
             <!--======================= QUALIFICATION ITEM 3 =======================-->
             <div class="qualification__item">
               <h3 class="qualification__item-name">Web Development</h3>
-              <p class="qualification__item-desc">Peru - Insitute</p>
+              <p class="qualification__item-desc">Cambridge - Insitute</p>
               <span class="qualification__item-time">
                 <i class="fa-solid fa-calendar-days"></i>
                 2017 - 2020
@@ -203,7 +217,7 @@
             </div>
             <div class="qualification__item">
               <h3 class="qualification__item-name">Master in Ui/Ux</h3>
-              <p class="qualification__item-desc">Peru - Insitute</p>
+              <p class="qualification__item-desc">Oxford - Insitute</p>
               <span class="qualification__item-time">
                 <i class="fa-solid fa-calendar-days"></i>
                 2020 - 2022
@@ -215,7 +229,7 @@
             <!--======================= QUALIFICATION ITEM 1 =======================-->
             <div class="qualification__item">
               <h3 class="qualification__item-name">Software Engineer</h3>
-              <p class="qualification__item-desc">Microsoft - Peru</p>
+              <p class="qualification__item-desc">Microsoft - Washington</p>
               <span class="qualification__item-time">
                 <i class="fa-solid fa-calendar-days"></i>
                 2016 - 2018
@@ -236,7 +250,7 @@
             </div>
             <div class="qualification__item">
               <h3 class="qualification__item-name">Front-end Developer</h3>
-              <p class="qualification__item-desc">Apple Inc - Spain</p>
+              <p class="qualification__item-desc">Apple Inc - California</p>
               <span class="qualification__item-time">
                 <i class="fa-solid fa-calendar-days"></i>
                 2018 - 2020
@@ -245,7 +259,7 @@
             <!--======================= QUALIFICATION ITEM 3 =======================-->
             <div class="qualification__item">
               <h3 class="qualification__item-name">UI Designer</h3>
-              <p class="qualification__item-desc">Figma - Spain</p>
+              <p class="qualification__item-desc">Figma - Washington</p>
               <span class="qualification__item-time">
                 <i class="fa-solid fa-calendar-days"></i>
                 2020 - 2022
@@ -382,19 +396,17 @@
       <section id="portfolio" class="section__main wide">
         <h2 class="section__title">Portfolio</h2>
         <h5 class="section__subtitle">Most recent work</h5>
-        <div class='test'>
+        <div class='portfolio__main'>
           <div class="portfolio__section swiper">
             <div class="swiper-wrapper">
               <!--======================= PORTFOLIO CONTENT 1 =======================-->
-              <div class="portfolio__main swiper-slide">
-                <img
-                  class="portfolio__main-img"
-                  src="/assets/img/student4.jpg"
-                  alt=""
-                />
-                <div class="portfolio__main-content">
+              <div class="portfolio__content swiper-slide">
+                <div
+                class="portfolio__content-img" style="background-image:url('./assets/img/portfolio1.jpg')">
+              </div>
+                <div class="portfolio__content-desc">
                   <h3 class="portfolio__content-title">Mordern Website</h3>
-                  <p class="portfolio__content-desc">
+                  <p class="portfolio__content-text">
                     Website adaptable to all devices , with ui components and
                     animated interactions
                   </p>
@@ -405,16 +417,14 @@
                 </div>
               </div>
               <!--======================= PORTFOLIO CONTENT 2 =======================-->
-              <div class="portfolio__main swiper-slide">
-                <img
-                  class="portfolio__main-img"
-                  src="/assets/img/student4.jpg"
-                  alt=""
-                />
-                <div class="portfolio__main-content">
+              <div class="portfolio__content swiper-slide">
+                <div
+                class="portfolio__content-img" style="background-image:url('./assets/img/portfolio2.jpg')">
+              </div>
+                <div class="portfolio__content-desc">
                   <h3 class="portfolio__content-title">Brand Design</h3>
-                  <p class="portfolio__content-desc">
-                    Website adaptable to all devices, with ui components and
+                  <p class="portfolio__content-text">
+                    Website adaptable to all devices , with ui components and
                     animated interactions
                   </p>
                   <a href="#" class="btn portfolio__content-link">
@@ -424,16 +434,14 @@
                 </div>
               </div>
               <!--======================= PORTFOLIO CONTENT 3 =======================-->
-              <div class="portfolio__main swiper-slide">
-                <img
-                  class="portfolio__main-img"
-                  src="/assets/img/student4.jpg"
-                  alt=""
-                />
-                <div class="portfolio__main-content">
+              <div class="portfolio__content swiper-slide">
+                <div
+                class="portfolio__content-img" style="background-image:url('./assets/img/portfolio3.jpg')">
+              </div>
+                <div class="portfolio__content-desc">
                   <h3 class="portfolio__content-title">Online Store</h3>
-                  <p class="portfolio__content-desc">
-                    Website adaptable to all devices, with ui components and
+                  <p class="portfolio__content-text">
+                    Website adaptable to all devices , with ui components and
                     animated interactions
                   </p>
                   <a href="#" class="btn portfolio__content-link">
@@ -442,6 +450,7 @@
                   </a>
                 </div>
               </div>
+
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -659,5 +668,6 @@
     <a href="#" class="to-top-btn"><i class="uil uil-angle-double-up"></i></a>
   </body>
   <script src="./assets/js/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./assets/js/script.js"></script>
 </html>

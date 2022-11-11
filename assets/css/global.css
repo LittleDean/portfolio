@@ -21,9 +21,8 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-  /* ======== FONT ======== */
+  /* ======== FONT======== */
   --body-font: "Poppins", sans-serif;
-
   /* ======== FONT WEIGHT======== */
   --fw-medium: 500;
   --fw-semi-bold: 600;
@@ -76,9 +75,4 @@ h3,
 h4 {
   color: var(--title-color);
   font-weight: var(--fw-semi-bold);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }

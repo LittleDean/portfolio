@@ -1,0 +1,400 @@
+.wide {
+  margin: 0 auto;
+}
+/* Chiều dài 1 khung container */
+
+/* ======================= MEDIA QUERIES ======================= */
+/* For Medium Screen (568px - 767px) + (768px - 1023px) */
+
+@media screen and (max-width: 767px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  #header {
+    bottom: 0;
+    top: unset;
+  }
+
+  .nav-bar {
+    position: absolute;
+    display: grid;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 30px 60px;
+    background-color: var(--container-color);
+    z-index: var(--z-fixed);
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    transform: translateY(100%);
+    transition: linear 0.15s;
+  }
+
+  .nav-bar.active {
+    transform: translateY(0);
+  }
+
+  .nav-bar__item-link {
+    text-align: center;
+    padding: 0;
+  }
+  .nav-bar__item-link i {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+  }
+  .nav-bar__item-link::after {
+    display: none;
+  }
+
+  .nav-bar__close {
+    position: absolute;
+    font-size: 2.4rem;
+    right: 20px;
+    bottom: 10px;
+  }
+
+  .scroll-down {
+    bottom: 60px;
+  }
+
+  /* CONTAINER */
+
+  .section__main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .home__main {
+    margin: 0 30px;
+    column-gap: 20px;
+    padding-left: 40px;
+    padding-right: 0;
+  }
+
+  .home-follow {
+    left: 20px;
+  }
+
+  .desc-title,
+  .unit-name {
+    font-size: 1.6rem;
+  }
+  .desc-content {
+    font-size: 1.5rem;
+  }
+
+  .main__img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .about__section {
+    column-gap: 40px;
+  }
+
+  .skills__section {
+    gap: 12px 50px;
+  }
+
+  .qualification__section {
+    grid-template-columns: 0.75fr;
+  }
+
+  .services__section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  #project {
+    padding-top: 100px;
+  }
+
+  .project__section {
+    border-radius: 0px;
+  }
+  .project__section-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  #testimonial {
+    margin: 0 20px;
+  }
+
+  .contact__section {
+    gap: 30px;
+  }
+
+  .contact__form {
+    grid-template-areas:
+      "name"
+      "email"
+      "project"
+      "message";
+    grid-template-rows: 64px 64px 88px 190px;
+    grid-template-columns: 1fr;
+    flex: 1;
+  }
+
+  .contact__form-number {
+    display: none;
+  }
+  #footer {
+    height: 200px;
+    padding: 0 30px 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    --fs-title: 3rem;
+  }
+
+  .header-main {
+    padding: 0 20px;
+  }
+
+  .nav-bar__item-link i {
+    display: none;
+  }
+
+  .header__nav-show,
+  .nav-bar__close {
+    display: none;
+  }
+
+  .wide {
+    width: 720px;
+  }
+
+  .home-follow {
+    left: 20px;
+  }
+
+  .theme-icon {
+    font-size: 1.4rem;
+  }
+
+  .home__main {
+    padding-left: 50px;
+    column-gap: 40px;
+  }
+
+  .main__img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .about__section {
+    column-gap: 50px;
+  }
+
+  .about__section-detail {
+    gap: 30px;
+  }
+
+  .to-top-btn {
+    bottom: 160px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    --fs-title: 3rem;
+  }
+
+  .section__main {
+    min-height: unset;
+    margin-bottom: 80px;
+  }
+  .section__main:last-child {
+    margin-bottom: 0;
+  }
+  .portfolio__content {
+    column-gap: 20px;
+    padding: 0 30px 50px;
+  }
+  .portfolio__main {
+    --position-slide-button: -10px;
+  }
+}
+/* For Small Screen (350px -567px) */
+
+@media screen and (max-width: 585px) {
+  .home__main {
+    padding-left: 0;
+    flex-direction: column-reverse;
+    row-gap: 40px;
+  }
+  .home-follow {
+    top: 30%;
+    left: 30px;
+    font-size: 2.8rem;
+  }
+
+  .section__main {
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .section__subtitle {
+    margin-bottom: 50px;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+
+  .about__section {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+
+  .about__section-img {
+    width: 280px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .about__section-detail {
+    align-items: center;
+    row-gap: 30px;
+  }
+
+  .about__section-desc {
+    text-align: center;
+  }
+
+  .about__section-exp-number {
+    font-size: 2.6rem;
+  }
+  .about__section-exp-type {
+    font-size: 1.4rem;
+  }
+
+  .skills__section {
+    grid-template-columns: 1fr;
+  }
+
+  .qualification__section {
+    grid-template-columns: 1fr;
+  }
+
+  #services {
+    margin-bottom: 50px;
+  }
+
+  .services__modal-main {
+    margin: auto 14px;
+    width: 100%;
+  }
+
+  .portfolio__content {
+    grid-template-columns: 1fr;
+    align-items: center;
+    row-gap: 28px;
+  }
+
+  .portfolio__content-img {
+    height: 200px;
+  }
+
+  .portfolio__content-desc {
+    height: unset;
+    row-gap: 20px;
+  }
+
+  #project {
+    padding-top: 0;
+  }
+
+  .project__section {
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project__section-content {
+    justify-content: flex-start;
+    row-gap: 20px;
+    padding: 40px 14px;
+  }
+
+  .project__section-img img {
+    transform: rotateY(180deg);
+  }
+
+  #testimonial {
+    margin-bottom: 50px;
+  }
+
+  .contact__section {
+    flex-direction: column;
+  }
+
+  .contact__info {
+    min-width: 100%;
+  }
+
+  .contact__map {
+    display: none;
+  }
+
+  #footer {
+    height: 230px;
+    padding: 12px 14px 30px;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+  .footer__social {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .main__img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .services__section {
+    padding: 0 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .qualification__content {
+    column-gap: 0;
+  }
+
+  .section__main {
+    padding-bottom: 30px;
+  }
+}
+
+/* For Large Screen (>1024px) */
+@media screen and (min-width: 1024px) {
+  .wide {
+    width: 800px;
+  }
+
+  .container {
+    --fs-title: 4rem;
+  }
+
+  .section__main {
+    min-height: 100vh;
+    margin-bottom: 0;
+  }
+}

@@ -198,10 +198,6 @@
   .about__section-detail {
     gap: 30px;
   }
-
-  .to-top-btn {
-    bottom: 160px;
-  }
 }
 
 @media screen and (max-width: 900px) {

@@ -932,7 +932,7 @@ body.modal-open {
 
 /* ======================= FOOTER ======================= */
 #footer {
-  height: 150px;
+  height: 250px;
   background-color: var(--main-color);
 }
 

@@ -7,6 +7,10 @@
 /* For Medium Screen (568px - 767px) + (768px - 1023px) */
 
 @media screen and (max-width: 767px) {
+  :root {
+    --header-height: 70px;
+  }
+
   #header {
     bottom: 0;
     top: unset;
@@ -20,7 +24,7 @@
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 20px 30px 50px;
+    padding: 20px 30px 60px;
     background-color: var(--container-color);
     z-index: var(--z-fixed);
     text-align: center;
@@ -51,8 +55,12 @@
   .nav-bar__close {
     position: absolute;
     font-size: 2.4rem;
-    right: 30px;
+    right: 20px;
     bottom: 10px;
+  }
+
+  .scroll-down {
+    bottom: 60px;
   }
 
   /* CONTAINER */

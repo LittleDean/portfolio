@@ -23,7 +23,7 @@ const modalCloseBtns = $$('.modal__main-close')
 
 
 // Swiper Portfolio
-var swiperPortfolio = new Swiper(".portfolio__section", {
+var swiper = new Swiper(".portfolio__section", {
     cssMode: true,
     slidesPerView: 1,
     loop: true,
@@ -38,8 +38,9 @@ var swiperPortfolio = new Swiper(".portfolio__section", {
     },
 });
 
+
 // Swiper Testimonial
-var swiper = new Swiper(".testimonial__section", {
+swiper = new Swiper(".testimonial__section", {
     loop: true,
     grabCursor: true,
     slidesPerView: 1,
@@ -55,24 +56,6 @@ var swiper = new Swiper(".testimonial__section", {
         }
     },
 });
-
-// Scroll Reveal
-const sr = ScrollReveal({
-    distance: '45px',
-    duration: 2700,
-    reset: true,
-})
-
-function handleScrollReveal() {
-    sr.reveal('.main__desc', { delay: 300, origin: 'left' })
-    // sr.reveal('.main__avatar', { delay: 300, origin: 'right' })
-    sr.reveal('.about__section-img', { delay: 300, origin: 'left' })
-    // sr.reveal('.about__section-detail', { delay: 300, origin: 'right' })
-    sr.reveal('.contact__info', { delay: 300, origin: 'left' })
-    // sr.reveal('.contact__form', { delay: 300, origin: 'right' })
-    sr.reveal('.skills__section,.qualification__section,.services__section,.portfolio__main,.project__section,.testimonial__section', { delay: 100, origin: 'bottom' })
-}
-handleScrollReveal();
 
 // Lắng nghe / xử lí các sự kiện (DOM Events)
 const app = {
@@ -180,7 +163,7 @@ const app = {
 
         // Show/Hide Header Navigation
         showHeaderNavBtn.onclick = (() => {
-            headerNavBar.classList.toggle('active')
+            headerNavBar.classList.add('active')
         })
         hideHeaderNavBtn.onclick = (() => {
             headerNavBar.classList.remove('active')
@@ -323,6 +306,7 @@ const app = {
     loadConfig: function () {
         this.isDarkTheme = this.config.isDarkTheme;
         body.classList.toggle('dark-theme', this.isDarkTheme)
+        themeCheckbox.checked = this.isDarkTheme
     },
 
     start: function () {
@@ -334,8 +318,6 @@ const app = {
 
 
         this.handleDropDown();
-        themeCheckbox.checked = this.isDarkTheme
-
     },
 }
 
